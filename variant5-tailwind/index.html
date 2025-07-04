@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMR Industrieverwertung - Kontakt</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a',
+                        'primary-light': '#3b82f6',
+                        'primary-dark': '#1e40af'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-primary text-white fixed w-full top-0 z-50 shadow-lg transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold">IMR</h1>
+                        <span class="text-sm opacity-80">Industrieverwertung</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#firmenaufloesung" class="hover:text-blue-300 transition-colors duration-300 font-medium">Firmenauflösung</a>
+                        <a href="#betriebsaufloesung" class="hover:text-blue-300 transition-colors duration-300 font-medium">Betriebsauflösung</a>
+                        <a href="#industrieverwertung" class="hover:text-blue-300 transition-colors duration-300 font-medium">Industrieverwertung</a>
+                        <a href="#kontakt" class="hover:text-blue-300 transition-colors duration-300 font-medium">Kontakt</a>
+                    </div>
+                </div>
+                
+                <div class="md:hidden">
+                    <button type="button" class="text-white hover:text-blue-300 focus:outline-none focus:text-blue-300" id="mobile-menu-button">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-primary-dark">
+                <a href="#firmenaufloesung" class="block px-3 py-2 text-white hover:text-blue-300 font-medium">Firmenauflösung</a>
+                <a href="#betriebsaufloesung" class="block px-3 py-2 text-white hover:text-blue-300 font-medium">Betriebsauflösung</a>
+                <a href="#industrieverwertung" class="block px-3 py-2 text-white hover:text-blue-300 font-medium">Industrieverwertung</a>
+                <a href="#kontakt" class="block px-3 py-2 text-white hover:text-blue-300 font-medium">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary to-primary-light text-white pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+            <div class="text-center">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
+                    Professionelle Industrieverwertung
+                </h2>
+                <p class="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up-delayed">
+                    Ihr Partner für Firmenauflösung, Betriebsauflösung und Industrieverwertung
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 lg:py-24 bg-gray-50" id="kontakt">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-3xl font-bold text-primary mb-8">Kontakt</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <svg class="w-6 h-6 text-primary mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-1">Adresse</h4>
+                                <p class="text-gray-600">
+                                    Fürfelder Str. 10<br>
+                                    70437 Stuttgart
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <svg class="w-6 h-6 text-primary mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-1">Telefon</h4>
+                                <p class="text-gray-600">
+                                    <a href="tel:0711/39681250" class="text-primary hover:text-primary-dark transition-colors duration-300">
+                                        0711 / 3968 1250
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <svg class="w-6 h-6 text-primary mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-1">E-Mail</h4>
+                                <p class="text-gray-600">
+                                    <a href="mailto:info@imr-verwertung.de" class="text-primary hover:text-primary-dark transition-colors duration-300">
+                                        info@imr-verwertung.de
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <svg class="w-6 h-6 text-primary mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-1">Öffnungszeiten</h4>
+                                <p class="text-gray-600">
+                                    Montag - Freitag: 7:00 – 20:00<br>
+                                    Samstag: 8:00 – 14:00<br>
+                                    und nach Vereinbarung
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div>
+                    <div class="bg-white rounded-lg shadow-xl p-8">
+                        <h3 class="text-3xl font-bold text-primary mb-6">Nachricht senden</h3>
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300">
+                                <div class="text-red-600 text-sm mt-1 hidden error-message"></div>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">E-Mail *</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300">
+                                <div class="text-red-600 text-sm mt-1 hidden error-message"></div>
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Telefon *</label>
+                                <input type="tel" id="phone" name="phone" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300">
+                                <div class="text-red-600 text-sm mt-1 hidden error-message"></div>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Nachricht</label>
+                                <textarea id="message" name="message" rows="5" 
+                                          class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300"></textarea>
+                            </div>
+                            
+                            <button type="submit" 
+                                    class="w-full bg-primary text-white py-3 px-6 rounded-md font-semibold hover:bg-primary-dark transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                                <span class="submit-text">Nachricht senden</span>
+                                <span class="loading-text hidden">Wird gesendet...</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold text-primary mb-4">Unsere Leistungen</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg p-8 text-center hover:transform hover:-translate-y-2 transition-all duration-300 hover:shadow-lg">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary mb-3">Maschinen & Fahrzeuge</h4>
+                    <p class="text-gray-600">Professionelle Verwertung von Industriemaschinen und Fahrzeugen</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-8 text-center hover:transform hover:-translate-y-2 transition-all duration-300 hover:shadow-lg">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary mb-3">Verwertung & Recycling</h4>
+                    <p class="text-gray-600">Nachhaltige Verwertung und umweltgerechtes Recycling</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-lg p-8 text-center hover:transform hover:-translate-y-2 transition-all duration-300 hover:shadow-lg">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-primary mb-3">Demontage & Abbrüche</h4>
+                    <p class="text-gray-600">Fachgerechte Demontage und Abbrucharbeiten</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm mb-4 md:mb-0">&copy; 2024 IMR Industrieverwertung. Alle Rechte vorbehalten.</p>
+                <div class="flex space-x-6">
+                    <a href="#impressum" class="text-sm hover:text-blue-300 transition-colors duration-300">Impressum</a>
+                    <a href="#datenschutz" class="text-sm hover:text-blue-300 transition-colors duration-300">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
