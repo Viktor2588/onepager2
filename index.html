@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INDUVA GmbH - Onepage Variants</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -165,10 +163,10 @@
                 <p class="subtitle mb-4">Moderne Nuxt 3 Implementierungen für individuelle Verwertungslösungen</p>
             </div>
 
-            <!-- Current Variant -->
+            <!-- Current Variants -->
             <div class="row g-4 mb-5 justify-content-center">
                 <!-- Nuxt 3 - INDUVA Variant -->
-                <div class="col-lg-8 col-xl-6">
+                <div class="col-lg-6 col-xl-6">
                     <div class="card variant-card h-100 card-special">
                         <div class="card-header text-center">
                             <i class="bi bi-lightning-charge fs-1 mb-3"></i>
@@ -217,6 +215,61 @@
                             </div>
                             <a href="variant6-nuxt/dist/index.html" class="btn btn-variant w-100 btn-lg">
                                 <i class="bi bi-eye me-2"></i>INDUVA Demo ansehen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nuxt 3 - INDUVA Images Variant -->
+                <div class="col-lg-6 col-xl-6">
+                    <div class="card variant-card h-100">
+                        <div class="card-header text-center">
+                            <i class="bi bi-camera-fill fs-1 mb-3"></i>
+                            <h3 class="mb-2">Nuxt 3 - Visuelle INDUVA</h3>
+                            <p class="mb-0 opacity-75">Bildbasierte Verwertungslösungen</p>
+                        </div>
+                        <div class="card-img-container">
+                            <div class="demo-content">
+                                <div class="feature-icon">
+                                    <i class="bi bi-images"></i>
+                                </div>
+                                <h5 class="fw-bold">Bildgalerie & Medien</h5>
+                                <p class="mb-0">Visuelle Dokumentation & Fotografie</p>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted mb-4">
+                                Spezialisierte Nuxt 3 Anwendung mit Fokus auf visuelle Komponenten, 
+                                Bildergalerien, Lightbox-Funktionalität und professionelle Fotodokumentation.
+                            </p>
+                            <div class="mb-4">
+                                <span class="tech-badge">Nuxt 3</span>
+                                <span class="tech-badge">@nuxt/image</span>
+                                <span class="tech-badge">Vue 3</span>
+                                <span class="tech-badge">Lightbox</span>
+                                <span class="tech-badge">Galerie</span>
+                                <span class="tech-badge">Responsive</span>
+                            </div>
+                            <div class="features mb-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <small class="text-muted">
+                                            <i class="bi bi-check-circle-fill text-success me-1"></i> Bildergalerie<br>
+                                            <i class="bi bi-check-circle-fill text-success me-1"></i> Lightbox Modal<br>
+                                            <i class="bi bi-check-circle-fill text-success me-1"></i> Vorher/Nachher
+                                        </small>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <small class="text-muted">
+                                            <i class="bi bi-check-circle-fill text-success me-1"></i> Prozess-Timeline<br>
+                                            <i class="bi bi-check-circle-fill text-success me-1"></i> Foto-Services<br>
+                                            <i class="bi bi-check-circle-fill text-success me-1"></i> Visual Design
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="variant7-nuxt-images/dist/index.html" class="btn btn-variant w-100 btn-lg">
+                                <i class="bi bi-camera me-2"></i>Bildvariante ansehen
                             </a>
                         </div>
                     </div>
@@ -341,7 +394,6 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Add smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -357,16 +409,23 @@
             });
         });
 
-        // Add loading animation to demo button
-        document.querySelector('.btn-variant').addEventListener('click', function() {
-            const originalText = this.innerHTML;
-            this.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Lädt INDUVA Demo...';
-            this.disabled = true;
-            
-            setTimeout(() => {
-                this.innerHTML = originalText;
-                this.disabled = false;
-            }, 1500);
+        // Add loading animation to demo buttons
+        document.querySelectorAll('.btn-variant').forEach(button => {
+            button.addEventListener('click', function() {
+                const originalText = this.innerHTML;
+                const isImageVariant = this.href.includes('variant7-nuxt-images');
+                const loadingText = isImageVariant ? 
+                    '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Lädt Bildvariante...' :
+                    '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Lädt INDUVA Demo...';
+                
+                this.innerHTML = loadingText;
+                this.disabled = true;
+                
+                setTimeout(() => {
+                    this.innerHTML = originalText;
+                    this.disabled = false;
+                }, 1500);
+            });
         });
 
         // Add parallax effect to gear icons
