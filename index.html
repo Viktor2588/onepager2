@@ -3,112 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMR Industrieverwertung - Onepage Variants</title>
+    <title>INDUVA GmbH - Onepage Variants</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-green: #1a3d2e;
+            --primary-green-light: #2d5a47;
+            --accent-mustard: #d4a574;
+            --accent-mustard-light: #e0b890;
+            --text-white: #ffffff;
+        }
+
         body {
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-green-light));
             min-height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         .variant-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: none;
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
         }
         
         .variant-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
         }
         
         .variant-card .card-header {
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-            color: white;
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-green-light));
+            color: var(--text-white);
             border: none;
-            padding: 1.5rem;
+            padding: 2rem;
         }
         
         .variant-card .card-body {
-            padding: 2rem;
+            padding: 2.5rem;
         }
         
         .tech-badge {
             display: inline-block;
-            background: #f8f9fa;
-            color: #1e3a8a;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
+            background: var(--accent-mustard);
+            color: var(--primary-green);
+            padding: 0.4rem 1rem;
+            border-radius: 25px;
             font-size: 0.875rem;
-            font-weight: 500;
+            font-weight: 600;
             margin: 0.25rem;
+            box-shadow: 0 2px 10px rgba(212, 165, 116, 0.3);
         }
         
         .main-title {
-            color: white;
+            color: var(--text-white);
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-weight: 700;
         }
         
         .subtitle {
-            color: rgba(255,255,255,0.9);
+            color: var(--accent-mustard);
+            font-weight: 500;
         }
         
         .btn-variant {
-            background: #1e3a8a;
+            background: linear-gradient(45deg, var(--accent-mustard), var(--accent-mustard-light));
             border: none;
-            color: white;
-            padding: 0.75rem 2rem;
-            border-radius: 25px;
-            font-weight: 500;
+            color: var(--primary-green);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(212, 165, 116, 0.3);
         }
         
         .btn-variant:hover {
-            background: #1e40af;
             transform: translateY(-2px);
-            color: white;
+            box-shadow: 0 8px 30px rgba(212, 165, 116, 0.4);
+            color: var(--primary-green);
         }
         
         .footer-link {
-            color: rgba(255,255,255,0.8);
+            color: var(--accent-mustard);
             text-decoration: none;
             transition: color 0.3s ease;
         }
         
         .footer-link:hover {
-            color: white;
+            color: var(--accent-mustard-light);
         }
         
         .feature-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-mustard), var(--accent-mustard-light));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1rem;
-        }
-        
-        .preview-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #28a745;
-            color: white;
-            padding: 0.25rem 0.5rem;
-            border-radius: 10px;
-            font-size: 0.75rem;
+            margin: 0 auto 1.5rem;
+            color: var(--primary-green);
+            font-size: 1.5rem;
         }
         
         .card-img-container {
             position: relative;
-            height: 200px;
+            height: 220px;
             overflow: hidden;
-            background: #f8f9fa;
+            background: linear-gradient(135deg, rgba(26, 61, 46, 0.1), rgba(45, 90, 71, 0.1));
             display: flex;
             align-items: center;
             justify-content: center;
@@ -116,8 +124,27 @@
         
         .demo-content {
             text-align: center;
-            color: #6c757d;
+            color: var(--primary-green);
             padding: 2rem;
+        }
+
+        .gear-animation {
+            animation: rotate 10s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-section {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .card-special {
+            background: linear-gradient(135deg, rgba(212, 165, 116, 0.1), rgba(224, 184, 144, 0.1));
+            border: 2px solid var(--accent-mustard);
         }
     </style>
 </head>
@@ -125,292 +152,159 @@
     <div class="container-fluid py-5">
         <div class="container">
             <!-- Header -->
-            <div class="text-center mb-5">
-                <h1 class="display-4 fw-bold main-title mb-3">
-                    <i class="bi bi-building me-3"></i>
-                    IMR Industrieverwertung
-                </h1>
-                <p class="lead subtitle mb-4">Onepage Application Variants</p>
-                <p class="subtitle">Wählen Sie eine der folgenden Implementierungen:</p>
+            <div class="hero-section">
+                <div class="d-flex align-items-center justify-content-center mb-4">
+                    <div class="feature-icon me-3">
+                        <i class="bi bi-gear-fill gear-animation"></i>
+                    </div>
+                    <div>
+                        <h1 class="display-4 fw-bold main-title mb-2">INDUVA GmbH</h1>
+                        <p class="lead subtitle mb-0">Onepage Application Variants</p>
+                    </div>
+                </div>
+                <p class="subtitle mb-4">Moderne Nuxt 3 Implementierungen für individuelle Verwertungslösungen</p>
             </div>
 
-            <!-- Variants Grid -->
-            <div class="row g-4 mb-5">
-                <!-- HTML/CSS/JS Variant -->
-                <div class="col-lg-6 col-xl-4">
-                    <div class="card variant-card h-100">
+            <!-- Current Variant -->
+            <div class="row g-4 mb-5 justify-content-center">
+                <!-- Nuxt 3 - INDUVA Variant -->
+                <div class="col-lg-8 col-xl-6">
+                    <div class="card variant-card h-100 card-special">
                         <div class="card-header text-center">
-                            <i class="bi bi-code-slash fs-2 mb-2"></i>
-                            <h4 class="mb-0">HTML/CSS/JS</h4>
+                            <i class="bi bi-lightning-charge fs-1 mb-3"></i>
+                            <h3 class="mb-2">Nuxt 3 - INDUVA</h3>
+                            <p class="mb-0 opacity-75">Premium Verwertungslösungen</p>
                         </div>
                         <div class="card-img-container">
                             <div class="demo-content">
-                                <i class="bi bi-browser-chrome fs-1 text-primary"></i>
-                                <p class="mt-2 mb-0">Pure Web Technologies</p>
+                                <div class="feature-icon">
+                                    <i class="bi bi-gear-fill gear-animation"></i>
+                                </div>
+                                <h5 class="fw-bold">Modern Framework</h5>
+                                <p class="mb-0">Server-Side Rendering & SEO</p>
                             </div>
                         </div>
                         <div class="card-body">
-                            <p class="text-muted mb-3">Klassische Webentwicklung mit modernem Design und responsivem Layout.</p>
-                            <div class="mb-3">
-                                <span class="tech-badge">HTML5</span>
-                                <span class="tech-badge">CSS3</span>
-                                <span class="tech-badge">JavaScript</span>
-                                <span class="tech-badge">Responsive</span>
-                            </div>
-                            <div class="features mb-3">
-                                <small class="text-muted">
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> Keine Dependencies<br>
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> Schnelle Ladezeiten<br>
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> SEO-freundlich
-                                </small>
-                            </div>
-                            <a href="variant1-html-css-js/index.html" class="btn btn-variant w-100">
-                                <i class="bi bi-eye me-2"></i>Demo ansehen
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- React Variant -->
-                <div class="col-lg-6 col-xl-4">
-                    <div class="card variant-card h-100">
-                        <div class="card-header text-center">
-                            <i class="bi bi-layers fs-2 mb-2"></i>
-                            <h4 class="mb-0">React</h4>
-                        </div>
-                        <div class="card-img-container">
-                            <div class="demo-content">
-                                <i class="bi bi-bootstrap fs-1 text-info"></i>
-                                <p class="mt-2 mb-0">Component-Based</p>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p class="text-muted mb-3">Moderne React-Anwendung mit komponentenbasierter Architektur.</p>
-                            <div class="mb-3">
-                                <span class="tech-badge">React 18</span>
-                                <span class="tech-badge">Hooks</span>
-                                <span class="tech-badge">JSX</span>
-                                <span class="tech-badge">State Management</span>
-                            </div>
-                            <div class="features mb-3">
-                                <small class="text-muted">
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> Wiederverwendbare Komponenten<br>
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> Reactive Updates<br>
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> Modern Development
-                                </small>
-                            </div>
-                            <a href="variant2-react/build/index.html" class="btn btn-variant w-100">
-                                <i class="bi bi-eye me-2"></i>Demo ansehen
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Vue.js Variant -->
-                <div class="col-lg-6 col-xl-4">
-                    <div class="card variant-card h-100">
-                        <div class="card-header text-center">
-                            <i class="bi bi-triangle fs-2 mb-2"></i>
-                            <h4 class="mb-0">Vue.js</h4>
-                        </div>
-                        <div class="card-img-container">
-                            <div class="demo-content">
-                                <i class="bi bi-gem fs-1 text-success"></i>
-                                <p class="mt-2 mb-0">Progressive Framework</p>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p class="text-muted mb-3">Progressive Vue.js Framework mit Single File Components.</p>
-                            <div class="mb-3">
+                            <p class="text-muted mb-4">
+                                Professionelle Nuxt 3 Anwendung für INDUVA GmbH mit innovativem Design, 
+                                Server-Side Rendering und optimaler Performance für Verwertungslösungen.
+                            </p>
+                            <div class="mb-4">
+                                <span class="tech-badge">Nuxt 3</span>
                                 <span class="tech-badge">Vue 3</span>
-                                <span class="tech-badge">SFC</span>
-                                <span class="tech-badge">Vite</span>
-                                <span class="tech-badge">Composition API</span>
+                                <span class="tech-badge">TypeScript</span>
+                                <span class="tech-badge">SSR/SSG</span>
+                                <span class="tech-badge">SEO Ready</span>
+                                <span class="tech-badge">PWA</span>
                             </div>
-                            <div class="features mb-3">
-                                <small class="text-muted">
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> Einfache Integration<br>
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> Reaktive Daten<br>
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> Schnelle Entwicklung
-                                </small>
+                            <div class="features mb-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <small class="text-muted">
+                                            <i class="bi bi-check-circle-fill text-success me-1"></i> Server-Side Rendering<br>
+                                            <i class="bi bi-check-circle-fill text-success me-1"></i> SEO-Optimiert<br>
+                                            <i class="bi bi-check-circle-fill text-success me-1"></i> TypeScript Support
+                                        </small>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <small class="text-muted">
+                                            <i class="bi bi-check-circle-fill text-success me-1"></i> Modern Design System<br>
+                                            <i class="bi bi-check-circle-fill text-success me-1"></i> Responsive Layout<br>
+                                            <i class="bi bi-check-circle-fill text-success me-1"></i> Performance First
+                                        </small>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="variant3-vue/dist/index.html" class="btn btn-variant w-100">
-                                <i class="bi bi-eye me-2"></i>Demo ansehen
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bootstrap Variant -->
-                <div class="col-lg-6 col-xl-4">
-                    <div class="card variant-card h-100">
-                        <div class="card-header text-center">
-                            <i class="bi bi-grid-3x3-gap fs-2 mb-2"></i>
-                            <h4 class="mb-0">Bootstrap</h4>
-                        </div>
-                        <div class="card-img-container">
-                            <div class="demo-content">
-                                <i class="bi bi-layout-three-columns fs-1 text-warning"></i>
-                                <p class="mt-2 mb-0">Utility-First CSS</p>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p class="text-muted mb-3">Bootstrap 5 Framework mit vorgefertigten Komponenten.</p>
-                            <div class="mb-3">
-                                <span class="tech-badge">Bootstrap 5</span>
-                                <span class="tech-badge">Grid System</span>
-                                <span class="tech-badge">Components</span>
-                                <span class="tech-badge">Icons</span>
-                            </div>
-                            <div class="features mb-3">
-                                <small class="text-muted">
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> Schnelle Entwicklung<br>
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> Konsistentes Design<br>
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> Mobile-First
-                                </small>
-                            </div>
-                            <a href="variant4-bootstrap/index.html" class="btn btn-variant w-100">
-                                <i class="bi bi-eye me-2"></i>Demo ansehen
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tailwind CSS Variant -->
-                <div class="col-lg-6 col-xl-4">
-                    <div class="card variant-card h-100">
-                        <div class="card-header text-center">
-                            <i class="bi bi-palette fs-2 mb-2"></i>
-                            <h4 class="mb-0">Tailwind CSS</h4>
-                        </div>
-                        <div class="card-img-container">
-                            <div class="demo-content">
-                                <i class="bi bi-brush fs-1 text-danger"></i>
-                                <p class="mt-2 mb-0">Utility-First Design</p>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p class="text-muted mb-3">Modernes Tailwind CSS mit utility-first Ansatz.</p>
-                            <div class="mb-3">
-                                <span class="tech-badge">Tailwind CSS</span>
-                                <span class="tech-badge">Utilities</span>
-                                <span class="tech-badge">Responsive</span>
-                                <span class="tech-badge">Custom Design</span>
-                            </div>
-                            <div class="features mb-3">
-                                <small class="text-muted">
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> Hochgradig anpassbar<br>
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> Kleine Bundle-Größe<br>
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> Moderne Ästhetik
-                                </small>
-                            </div>
-                            <a href="variant5-tailwind/index.html" class="btn btn-variant w-100">
-                                <i class="bi bi-eye me-2"></i>Demo ansehen
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- GitHub Repository -->
-                <div class="col-lg-6 col-xl-4">
-                    <div class="card variant-card h-100">
-                        <div class="card-header text-center">
-                            <i class="bi bi-github fs-2 mb-2"></i>
-                            <h4 class="mb-0">Source Code</h4>
-                        </div>
-                        <div class="card-img-container">
-                            <div class="demo-content">
-                                <i class="bi bi-code-square fs-1 text-dark"></i>
-                                <p class="mt-2 mb-0">Open Source</p>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p class="text-muted mb-3">Vollständiger Quellcode aller Varianten verfügbar auf GitHub.</p>
-                            <div class="mb-3">
-                                <span class="tech-badge">GitHub</span>
-                                <span class="tech-badge">MIT License</span>
-                                <span class="tech-badge">Documentation</span>
-                                <span class="tech-badge">Open Source</span>
-                            </div>
-                            <div class="features mb-3">
-                                <small class="text-muted">
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> Vollständiger Code<br>
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> Dokumentation<br>
-                                    <i class="bi bi-check-circle-fill text-success me-1"></i> Frei verwendbar
-                                </small>
-                            </div>
-                            <a href="https://github.com/Viktor2588/imr-onepage-variants" class="btn btn-variant w-100">
-                                <i class="bi bi-github me-2"></i>GitHub Repository
+                            <a href="variant6-nuxt/dist/index.html" class="btn btn-variant w-100 btn-lg">
+                                <i class="bi bi-eye me-2"></i>INDUVA Demo ansehen
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Technology Comparison -->
+            <!-- Features Section -->
             <div class="row mb-5">
                 <div class="col-12">
-                    <div class="card">
-                        <div class="card-header bg-primary text-white">
-                            <h5 class="mb-0"><i class="bi bi-bar-chart me-2"></i>Technologie-Vergleich</h5>
+                    <div class="card" style="background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);">
+                        <div class="card-header text-center" style="background: linear-gradient(135deg, var(--primary-green), var(--primary-green-light)); color: white;">
+                            <h4 class="mb-0"><i class="bi bi-gear-wide-connected me-2"></i>INDUVA Design System</h4>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>Variante</th>
-                                            <th>Schwierigkeit</th>
-                                            <th>Performance</th>
-                                            <th>Wartbarkeit</th>
-                                            <th>Lernkurve</th>
-                                            <th>Einsatzgebiet</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><strong>HTML/CSS/JS</strong></td>
-                                            <td><span class="badge bg-success">Einfach</span></td>
-                                            <td><span class="badge bg-success">Sehr gut</span></td>
-                                            <td><span class="badge bg-warning">Mittel</span></td>
-                                            <td><span class="badge bg-success">Niedrig</span></td>
-                                            <td>Einfache Websites</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>React</strong></td>
-                                            <td><span class="badge bg-warning">Mittel</span></td>
-                                            <td><span class="badge bg-success">Gut</span></td>
-                                            <td><span class="badge bg-success">Sehr gut</span></td>
-                                            <td><span class="badge bg-warning">Mittel</span></td>
-                                            <td>Interaktive Apps</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Vue.js</strong></td>
-                                            <td><span class="badge bg-warning">Mittel</span></td>
-                                            <td><span class="badge bg-success">Gut</span></td>
-                                            <td><span class="badge bg-success">Gut</span></td>
-                                            <td><span class="badge bg-success">Niedrig</span></td>
-                                            <td>Progressive Enhancement</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Bootstrap</strong></td>
-                                            <td><span class="badge bg-success">Einfach</span></td>
-                                            <td><span class="badge bg-success">Gut</span></td>
-                                            <td><span class="badge bg-warning">Mittel</span></td>
-                                            <td><span class="badge bg-success">Niedrig</span></td>
-                                            <td>Rapid Prototyping</td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Tailwind CSS</strong></td>
-                                            <td><span class="badge bg-warning">Mittel</span></td>
-                                            <td><span class="badge bg-success">Sehr gut</span></td>
-                                            <td><span class="badge bg-success">Gut</span></td>
-                                            <td><span class="badge bg-warning">Mittel</span></td>
-                                            <td>Custom Design</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="row g-4">
+                                <div class="col-md-4 text-center">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-palette"></i>
+                                    </div>
+                                    <h5>Farbsystem</h5>
+                                    <p class="text-muted">
+                                        <strong>Primär:</strong> Dunkles Grün (#1a3d2e)<br>
+                                        <strong>Akzent:</strong> Senfgelb (#d4a574)<br>
+                                        <strong>Schrift:</strong> Weiß & Akzentfarbe
+                                    </p>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-gear-fill gear-animation"></i>
+                                    </div>
+                                    <h5>Logo Design</h5>
+                                    <p class="text-muted">
+                                        Zahnrad mit geschwungenem Pfeil<br>
+                                        nach oben rechts<br>
+                                        Symbolisiert Verwertung & Fortschritt
+                                    </p>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-lightning-charge"></i>
+                                    </div>
+                                    <h5>Performance</h5>
+                                    <p class="text-muted">
+                                        <strong>SSR:</strong> Server-Side Rendering<br>
+                                        <strong>SEO:</strong> Optimiert für Suchmaschinen<br>
+                                        <strong>PWA:</strong> Progressive Web App Ready
+                                    </p>
+                                </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Info -->
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <div class="card h-100" style="background: rgba(255,255,255,0.95);">
+                        <div class="card-header" style="background: var(--accent-mustard); color: var(--primary-green);">
+                            <h5 class="mb-0"><i class="bi bi-info-circle me-2"></i>Projekt Details</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-building text-success me-2"></i><strong>Unternehmen:</strong> INDUVA GmbH</li>
+                                <li class="mb-2"><i class="bi bi-tag text-success me-2"></i><strong>Slogan:</strong> Ihr Partner für individuelle Verwertungslösungen</li>
+                                <li class="mb-2"><i class="bi bi-code-square text-success me-2"></i><strong>Framework:</strong> Nuxt 3 mit Vue 3</li>
+                                <li class="mb-2"><i class="bi bi-device-laptop text-success me-2"></i><strong>Features:</strong> SSR, TypeScript, PWA</li>
+                                <li class="mb-2"><i class="bi bi-phone text-success me-2"></i><strong>Design:</strong> Mobile-First & Responsive</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100" style="background: rgba(255,255,255,0.95);">
+                        <div class="card-header" style="background: var(--primary-green); color: white;">
+                            <h5 class="mb-0"><i class="bi bi-github me-2"></i>Entwicklung</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-3">Modernes Nuxt 3 Projekt mit folgenden Technologien:</p>
+                            <div class="mb-3">
+                                <span class="tech-badge">Node.js 20+</span>
+                                <span class="tech-badge">pnpm/bun</span>
+                                <span class="tech-badge">Vite</span>
+                                <span class="tech-badge">ESLint</span>
+                            </div>
+                            <a href="https://github.com/Viktor2588/onepager2" class="btn btn-outline-primary">
+                                <i class="bi bi-github me-2"></i>GitHub Repository
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -420,16 +314,25 @@
             <footer class="text-center text-white">
                 <div class="row">
                     <div class="col-12">
-                        <p class="mb-3">
-                            <i class="bi bi-info-circle me-2"></i>
-                            Alle Varianten basieren auf der originalen <a href="https://imr-industrieverwertung.de/kontakt-imr/" class="footer-link">IMR Industrieverwertung</a> Website
-                        </p>
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <div class="feature-icon me-3" style="width: 40px; height: 40px;">
+                                <i class="bi bi-gear-fill gear-animation" style="font-size: 1rem;"></i>
+                            </div>
+                            <div>
+                                <p class="mb-1">
+                                    <strong>INDUVA GmbH</strong> - Entwickelt mit modernster Nuxt 3 Technologie
+                                </p>
+                                <small class="opacity-75">
+                                    Responsive Design für alle Endgeräte | Optimiert für Performance und SEO
+                                </small>
+                            </div>
+                        </div>
                         <p class="mb-0">
                             <small>
-                                &copy; 2024 IMR Industrieverwertung Onepage Variants. 
+                                &copy; 2024 INDUVA GmbH Onepage Variants. 
                                 <a href="#" class="footer-link">MIT License</a> | 
                                 <a href="#" class="footer-link">Dokumentation</a> | 
-                                <a href="#" class="footer-link">GitHub</a>
+                                <a href="https://github.com/Viktor2588/onepager2" class="footer-link">GitHub</a>
                             </small>
                         </p>
                     </div>
@@ -454,17 +357,24 @@
             });
         });
 
-        // Add loading animation to demo buttons
-        document.querySelectorAll('.btn-variant').forEach(button => {
-            button.addEventListener('click', function() {
-                const originalText = this.innerHTML;
-                this.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Loading...';
-                this.disabled = true;
-                
-                setTimeout(() => {
-                    this.innerHTML = originalText;
-                    this.disabled = false;
-                }, 1000);
+        // Add loading animation to demo button
+        document.querySelector('.btn-variant').addEventListener('click', function() {
+            const originalText = this.innerHTML;
+            this.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Lädt INDUVA Demo...';
+            this.disabled = true;
+            
+            setTimeout(() => {
+                this.innerHTML = originalText;
+                this.disabled = false;
+            }, 1500);
+        });
+
+        // Add parallax effect to gear icons
+        window.addEventListener('scroll', function() {
+            const gears = document.querySelectorAll('.gear-animation');
+            const scrolled = window.pageYOffset;
+            gears.forEach(gear => {
+                gear.style.transform = `rotate(${scrolled * 0.5}deg)`;
             });
         });
     </script>
