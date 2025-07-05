@@ -56,13 +56,6 @@
           </p>
         </div>
         
-        <div style="font-size: 0.8rem; opacity: 0.6; margin-top: 1rem;">
-          <p>
-            🤖 Entwickelt mit Nuxt 3 & modernen Bildtechnologien | 
-            📱 Responsive Design für optimale Bilddarstellung | 
-            ⚡ Optimiert für Performance und SEO
-          </p>
-        </div>
       </div>
     </div>
   </footer>

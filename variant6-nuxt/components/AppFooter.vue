@@ -44,13 +44,6 @@
           </div>
         </div>
         
-        <div style="font-size: 0.8rem; opacity: 0.6; margin-top: 1rem;">
-          <p>
-            🤖 Entwickelt mit modernster Nuxt 3 Technologie | 
-            Responsive Design für alle Endgeräte | 
-            Optimiert für Performance und SEO
-          </p>
-        </div>
       </div>
     </div>
   </footer>
