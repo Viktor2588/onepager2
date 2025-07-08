@@ -8,7 +8,7 @@ Slogan: Ihr Partner für individuelle Verwertungslösungen
 
 ## 🚀 Live Demo
 
-**GitHub Pages:** [https://Viktor2588.github.io](https://Viktor2588.github.io)
+**GitHub Pages:** [Onepager Demonstrator](https://Viktor2588.github.io/onepager2)
 
 ## 📁 Projekt-Struktur
 
@@ -23,18 +23,6 @@ onepager2/
 │   ├── package.json
 │   ├── src/
 │   └── dist/                           
-├── variant3/                      
-│   ├── package.json
-│   ├── src/
-│   └── dist/                          
-├── variant4/                
-│   ├── package.json
-│   ├── src/
-│   └── dist/   
-├── variant5/                  
-│   ├── package.json
-│   ├── src/
-│   └── dist/   
 └── README.md
 ```
 
