@@ -3,6 +3,15 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/google-fonts'
   ],
+  // Configure for static site generation
+  ssr: true,
+  nitro: {
+    prerender: {
+      routes: ['/']
+    }
+  },
+  // Generate static files for deployment
+  target: 'static',
   googleFonts: {
     families: {
       Inter: [400, 500, 600, 700],

@@ -17,21 +17,30 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18'
+        node-version: '22'
         cache: 'npm'
     
-    - name: Install and Build React
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 8pnp
+    
+    - name: Install and Build Nuxt Variant 6
       run: |
-        cd variant2-react
-        npm ci
-        npm run build
+        cd variant6-nuxt
+        pnpm install
+        pnpm run generate
+        mkdir -p dist
+        cp -r .output/public/* dist/
         cd ..
     
-    - name: Install and Build Vue
+    - name: Install and Build Nuxt Variant 7 (Images)
       run: |
-        cd variant3-vue
-        npm ci
-        npm run build
+        cd variant7-nuxt-images
+        pnpm install
+        pnpm run generate
+        mkdir -p dist
+        cp -r .output/public/* dist/
         cd ..
     
     - name: Setup Pages
