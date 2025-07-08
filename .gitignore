@@ -5,8 +5,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Production builds (these will be built during deployment)
-variant2-react/build/
-variant3-vue/dist/
+variant7-nuxt-images/dist/
+variant6-nuxt/dist/
 
 # Environment variables
 .env
