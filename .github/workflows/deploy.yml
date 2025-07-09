@@ -45,8 +45,9 @@ jobs:
         cd induva-nuxt
         pnpm install
         pnpm run generate
-        cp -r .output/public/* ../
-        cp public/IMG-20250708-WA0002.jpg ../
+        mkdir -p ../induva-nuxt
+        cp -r .output/public/* ../induva-nuxt/
+        cp public/IMG-20250708-WA0002.jpg ../induva-nuxt/
         cd ..
     
     - name: Setup Pages

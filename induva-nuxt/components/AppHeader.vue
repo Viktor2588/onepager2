@@ -3,7 +3,7 @@
     <div class="nav-container">
       <div class="logo">
         <div class="logo-icon">
-          <img src="/IMG-20250708-WA0002.jpg" alt="INDUVA Logo" style="width: 50px; height: 50px; object-fit: cover;">
+          <img src="./IMG-20250708-WA0002.jpg" alt="INDUVA Logo" style="width: 50px; height: 50px; object-fit: cover;">
         </div>
         <div class="logo-text">
           <h1>INDUVA</h1>
