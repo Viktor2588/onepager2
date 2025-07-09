@@ -44,6 +44,8 @@ jobs:
       run: |
         pnpm install
         pnpm run generate
+        ls -la .output/
+        ls -la .output/public/
     
     - name: Setup Pages
       uses: actions/configure-pages@v4

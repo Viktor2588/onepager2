@@ -6,14 +6,12 @@ export default defineNuxtConfig({
     '@vueuse/nuxt'
   ],
   // Configure for static site generation
-  ssr: true,
+  ssr: false,
   nitro: {
     prerender: {
       routes: ['/']
     }
   },
-  // Generate static files for deployment
-  target: 'static',
   googleFonts: {
     families: {
       Inter: [400, 500, 600, 700],
