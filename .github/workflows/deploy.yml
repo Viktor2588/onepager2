@@ -43,7 +43,10 @@ jobs:
     - name: Install and Build INDUVA Nuxt App
       run: |
         pnpm install
-        NUXT_APP_BASE_URL=/onepager2/ pnpm run build --preset github_pages
+        NUXT_APP_BASE_URL=/onepager2/ npx nuxt build --preset github_pages
+        ls -la
+        ls -la dist/ || echo "No dist folder"
+        ls -la .output/ || echo "No .output folder"
     
     - name: Setup Pages
       uses: actions/configure-pages@v4
