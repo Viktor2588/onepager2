@@ -7,11 +7,6 @@ export default defineNuxtConfig({
   ],
   // Configure for static site generation
   ssr: false,
-  nitro: {
-    prerender: {
-      routes: ['/']
-    }
-  },
   googleFonts: {
     families: {
       Inter: [400, 500, 600, 700],

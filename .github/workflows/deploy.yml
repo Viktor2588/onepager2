@@ -43,9 +43,7 @@ jobs:
     - name: Install and Build INDUVA Nuxt App
       run: |
         pnpm install
-        pnpm run generate
-        ls -la .output/
-        ls -la .output/public/
+        NUXT_APP_BASE_URL=/onepager2/ pnpm run build --preset github_pages
     
     - name: Setup Pages
       uses: actions/configure-pages@v4
@@ -53,7 +51,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: '.output/public'
+        path: 'dist'
     
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main'
