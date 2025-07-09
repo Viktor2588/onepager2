@@ -47,7 +47,7 @@ jobs:
         pnpm run generate
         mkdir -p ../induva-nuxt
         cp -r .output/public/* ../induva-nuxt/
-        cp public/IMG-20250708-WA0002.jpg ../induva-nuxt/
+        cp public/IMG-20250708-WA0002.jpg ../
         cd ..
     
     - name: Setup Pages
