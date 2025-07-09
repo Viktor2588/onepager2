@@ -46,6 +46,7 @@ jobs:
         pnpm install
         pnpm run generate
         cp -r .output/public/* ../
+        cp public/IMG-20250708-WA0002.jpg ../
         cd ..
     
     - name: Setup Pages
