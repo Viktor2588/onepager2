@@ -45,8 +45,7 @@ jobs:
         cd induva-nuxt
         pnpm install
         pnpm run generate
-        mkdir -p dist
-        cp -r .output/public/* dist/
+        cp -r .output/public/* ../
         cd ..
     
     - name: Setup Pages
