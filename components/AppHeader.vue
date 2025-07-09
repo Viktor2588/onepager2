@@ -3,7 +3,15 @@
     <div class="nav-container">
       <div class="logo">
         <div class="logo-icon">
-          <img src="/IMG-20250708-WA0002.jpg" alt="INDUVA Logo" style="width: 50px; height: 50px; object-fit: cover;">
+          <img src="/IMG-20250708-WA0002.jpg" alt="INDUVA Logo 1" style="width: 50px; height: 50px; object-fit: cover;">
+          <img src="/public/IMG-20250708-WA0002.jpg" alt="INDUVA Logo 2" style="width: 50px; height: 50px; object-fit: cover;">
+          <img src="../public/IMG-20250708-WA0002.jpg" alt="INDUVA Logo 3" style="width: 50px; height: 50px; object-fit: cover;">
+
+          <img src="/IMG-20250708-WA0002-assets.jpg" alt="INDUVA Logo 4" style="width: 50px; height: 50px; object-fit: cover;">
+          <img src="/assets/IMG-20250708-WA0002-assets.jpg" alt="INDUVA Logo 5" style="width: 50px; height: 50px; object-fit: cover;">
+          <img src="../public/IMG-20250708-WA0002.jpg" alt="INDUVA Logo 6" style="width: 50px; height: 50px; object-fit: cover;">
+
+          <img src="/IMG-20250708-WA0002-root.jpg" alt="INDUVA Logo 7" style="width: 50px; height: 50px; object-fit: cover;">
         </div>
         <div class="logo-text">
           <h1>INDUVA</h1>
