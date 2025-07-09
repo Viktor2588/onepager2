@@ -13,16 +13,10 @@ Slogan: Ihr Partner für individuelle Verwertungslösungen
 ## 📁 Projekt-Struktur
 
 ```
-onepager2/
-├── index.html                          # Haupt-Navigationsseite
-├── variant1/               
-│   ├── package.json
-│   ├── src/
-│   └── dist/   
-├── variant2/                    
-│   ├── package.json
-│   ├── src/
-│   └── dist/                           
+onepager2/             
+├── package.json
+├── src/
+└── dist/                              
 └── README.md
 ```
 
