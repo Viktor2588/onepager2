@@ -40,18 +40,9 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pnpm-store-
     
-    - name: Install and Build Nuxt Variant 6
+    - name: Install and Build Unified INDUVA Nuxt App
       run: |
-        cd variant6-nuxt
-        pnpm install
-        pnpm run generate
-        mkdir -p dist
-        cp -r .output/public/* dist/
-        cd ..
-    
-    - name: Install and Build Nuxt Variant 7 (Images)
-      run: |
-        cd variant7-nuxt-images
+        cd induva-nuxt
         pnpm install
         pnpm run generate
         mkdir -p dist

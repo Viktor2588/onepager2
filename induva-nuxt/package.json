@@ -1,0 +1,23 @@
+{
+  "name": "induva-nuxt-unified",
+  "version": "1.0.0",
+  "description": "Unified Nuxt 3 application for INDUVA GmbH with all features",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "staticBuildPreview": "pnpm run generate && pnpm run preview"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxt/image": "^1.0.0",
+    "nuxt": "^3.8.0"
+  },
+  "dependencies": {
+    "@nuxtjs/google-fonts": "^3.0.2",
+    "@vueuse/nuxt": "^10.5.0"
+  }
+}
