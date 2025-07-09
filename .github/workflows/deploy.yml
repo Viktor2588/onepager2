@@ -40,15 +40,10 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pnpm-store-
     
-    - name: Install and Build Unified INDUVA Nuxt App
+    - name: Install and Build INDUVA Nuxt App
       run: |
-        cd induva-nuxt
         pnpm install
         pnpm run generate
-        mkdir -p ../induva-nuxt
-        cp -r .output/public/* ../induva-nuxt/
-        cp public/IMG-20250708-WA0002.jpg ../
-        cd ..
     
     - name: Setup Pages
       uses: actions/configure-pages@v4
@@ -56,7 +51,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: '.'
+        path: '.output/public'
     
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main'
