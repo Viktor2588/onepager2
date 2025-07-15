@@ -6,7 +6,7 @@
     <AppGallery />
     <AppBeforeAfter />
     <AppProcess />
-    <AppContact />
+<!--    <AppContact />-->
     <AppFooter />
     <AppLightbox />
   </div>

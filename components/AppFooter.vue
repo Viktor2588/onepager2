@@ -8,46 +8,10 @@
             Ihr Partner für visuelle Verwertungslösungen
           </p>
         </div>
-        <div class="footer-links">
-          <NuxtLink to="#impressum">Impressum</NuxtLink>
-          <NuxtLink to="#datenschutz">Datenschutz</NuxtLink>
-          <NuxtLink to="#bildrechte">Bildrechte</NuxtLink>
-          <NuxtLink to="#kontakt">Kontakt</NuxtLink>
-        </div>
       </div>
       
       <!-- Additional Footer Info for Image Variant -->
       <div style="border-top: 1px solid rgba(212, 165, 116, 0.3); margin-top: 2rem; padding-top: 1.5rem; text-align: center;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 1rem;">
-          <div>
-            <h4 style="color: var(--accent-mustard); margin-bottom: 0.5rem;">📸 Bildservice</h4>
-            <p style="font-size: 0.9rem; opacity: 0.8;">
-              • Professionelle Industriefotografie<br>
-              • Drohnenaufnahmen & Luftbilder<br>
-              • Zeitraffer-Dokumentation<br>
-              • 360° Panorama-Aufnahmen
-            </p>
-          </div>
-          <div>
-            <h4 style="color: var(--accent-mustard); margin-bottom: 0.5rem;">🎥 Video & Medien</h4>
-            <p style="font-size: 0.9rem; opacity: 0.8;">
-              • Projektdokumentation in 4K<br>
-              • Live-Streaming von Demontagen<br>
-              • Virtual Reality Touren<br>
-              • Interaktive 3D-Modelle
-            </p>
-          </div>
-          <div>
-            <h4 style="color: var(--accent-mustard); margin-bottom: 0.5rem;">📊 Digitale Services</h4>
-            <p style="font-size: 0.9rem; opacity: 0.8;">
-              • Online Bildgalerien<br>
-              • Projekt-Dashboard mit Live-Updates<br>
-              • Fortschritts-Tracking per App<br>
-              • Cloud-basierte Bildarchivierung
-            </p>
-          </div>
-        </div>
-        
         <div style="margin-top: 2rem; padding: 1rem; background: rgba(212, 165, 116, 0.1); border-radius: 10px;">
           <h4 style="color: var(--accent-mustard); margin-bottom: 0.5rem;">🏆 Auszeichnungen & Zertifikate</h4>
           <p style="font-size: 0.9rem; opacity: 0.8;">

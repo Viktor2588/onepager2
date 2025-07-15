@@ -9,39 +9,31 @@
           class="gallery-item"
           @click="openLightbox(item)"
         >
-          <!-- Placeholder images with industrial themes -->
-          <div style="width: 100%; height: 300px; background: linear-gradient(135deg, #2d5a47, #1a3d2e); display: flex; align-items: center; justify-content: center; position: relative;">
-            <svg width="120" height="120" viewBox="0 0 120 120" style="opacity: 0.6;">
-              <g v-if="item.type === 'machinery'">
-                <rect x="20" y="40" width="80" height="60" fill="#d4a574" rx="8"/>
-                <circle cx="35" cy="55" r="8" fill="#1a3d2e"/>
-                <circle cx="85" cy="55" r="8" fill="#1a3d2e"/>
-                <rect x="30" y="70" width="60" height="8" fill="#1a3d2e" rx="4"/>
-                <rect x="45" y="25" width="30" height="20" fill="#d4a574" rx="4"/>
-              </g>
-              <g v-else-if="item.type === 'recycling'">
-                <path d="M60 20 L80 50 L40 50 Z" fill="#d4a574"/>
-                <path d="M40 50 L20 80 L60 80 Z" fill="#d4a574"/>
-                <path d="M60 80 L80 50 L100 80 Z" fill="#d4a574"/>
-                <circle cx="60" cy="60" r="15" fill="none" stroke="#1a3d2e" stroke-width="3"/>
-              </g>
-              <g v-else-if="item.type === 'demolition'">
-                <rect x="30" y="60" width="60" height="40" fill="#d4a574"/>
-                <polygon points="30,60 60,30 90,60" fill="#d4a574"/>
-                <rect x="45" y="70" width="8" height="20" fill="#1a3d2e"/>
-                <rect x="67" y="70" width="8" height="20" fill="#1a3d2e"/>
-              </g>
-              <g v-else>
-                <circle cx="60" cy="60" r="30" fill="#d4a574"/>
-                <rect x="50" y="50" width="20" height="20" fill="#1a3d2e" rx="4"/>
-              </g>
-            </svg>
+          <!-- Gallery images -->
+          <div style="width: 100%; height: 300px; position: relative; overflow: hidden; border-radius: 12px; background: linear-gradient(135deg, #2d5a47, #1a3d2e);">
+            <img 
+              :src="item.image" 
+              :alt="item.title" 
+              style="width: 100%; height: 100%; object-fit: cover;"
+              @error="handleImageError"
+              @load="handleImageLoad"
+            >
+            <div 
+              v-if="!item.imageLoaded" 
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #2d5a47, #1a3d2e); color: #d4a574; text-align: center; padding: 2rem;"
+            >
+              <div>
+                <div style="font-size: 3rem; margin-bottom: 1rem;">📷</div>
+                <div style="font-weight: 600; margin-bottom: 0.5rem;">{{ item.title }}</div>
+                <div style="font-size: 0.875rem; opacity: 0.8;">Bild wird geladen...</div>
+              </div>
+            </div>
             <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(212, 165, 116, 0.9); color: #1a3d2e; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600;">
               📸 {{ item.category }}
             </div>
           </div>
           
-          <div class="gallery-overlay">
+          <div v-if="item.imageLoaded" class="gallery-overlay">
             <h3>{{ item.title }}</h3>
             <p>{{ item.description }}</p>
           </div>
@@ -60,11 +52,12 @@
 <script setup>
 const galleryItems = ref([
   {
-    title: 'Industriemaschinen Demontage',
-    description: 'Professionelle Demontage einer 50-Tonnen Produktionsanlage',
-    category: 'Demontage',
-    type: 'machinery',
-    image: '/placeholder-machinery.jpg'
+    title: 'Fabrikhalle Transformation',
+    description: 'Komplette Transformation einer Industriehalle',
+    category: 'Transformation',
+    type: 'transformation',
+    image: '/img/IMG-20250714-FabrikhalleTransformation.jpg',
+    imageLoaded: false
   },
   {
     title: 'Metallrecycling Prozess',
@@ -116,6 +109,22 @@ const openLightbox = (item) => {
   }
 }
 
+const handleImageLoad = (event) => {
+  const imgSrc = event.target.src
+  const item = galleryItems.value.find(item => item.image === imgSrc.split('/').pop() || imgSrc.includes(item.image))
+  if (item) {
+    item.imageLoaded = true
+  }
+}
+
+const handleImageError = (event) => {
+  const imgSrc = event.target.src
+  const item = galleryItems.value.find(item => item.image === imgSrc.split('/').pop() || imgSrc.includes(item.image))
+  if (item) {
+    item.imageLoaded = false
+  }
+}
+
 const loadMoreImages = () => {
   // Simulate loading more images
   const newItems = [
@@ -124,14 +133,16 @@ const loadMoreImages = () => {
       description: 'Innovative Verfahren zur Rohstoffgewinnung aus Altmaterialien',
       category: 'Aufbereitung',
       type: 'processing',
-      image: '/placeholder-processing.jpg'
+      image: '/placeholder-processing.jpg',
+      imageLoaded: false
     },
     {
       title: 'Qualitätskontrolle',
       description: 'Strenge Qualitätsprüfung aller verwerteten Materialien',
       category: 'Kontrolle',
       type: 'quality',
-      image: '/placeholder-quality.jpg'
+      image: '/placeholder-quality.jpg',
+      imageLoaded: false
     }
   ]
   
