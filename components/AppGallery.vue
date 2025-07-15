@@ -50,13 +50,20 @@
 </template>
 
 <script setup>
+const { $config } = useNuxtApp()
+
+const getImagePath = (imagePath) => {
+  const baseURL = $config.app?.baseURL || '/'
+  return baseURL === '/' ? imagePath : `${baseURL}${imagePath}`
+}
+
 const galleryItems = ref([
   {
     title: 'Fabrikhalle Transformation',
     description: 'Komplette Transformation einer Industriehalle',
     category: 'Transformation',
     type: 'transformation',
-    image: '/img/IMG-20250714-FabrikhalleTransformation.jpg',
+    image: getImagePath('/img/IMG-20250714-FabrikhalleTransformation.jpg'),
     imageLoaded: false
   },
   {
@@ -64,35 +71,35 @@ const galleryItems = ref([
     description: 'Sortierung und Aufbereitung von Industriemetallen',
     category: 'Recycling',
     type: 'recycling',
-    image: '/placeholder-recycling.jpg'
+    image: getImagePath('/placeholder-recycling.jpg')
   },
   {
     title: 'Betriebsauflösung Komplett',
     description: 'Komplette Räumung und Verwertung eines Industriebetriebs',
     category: 'Auflösung',
     type: 'demolition',
-    image: '/placeholder-demolition.jpg'
+    image: getImagePath('/placeholder-demolition.jpg')
   },
   {
     title: 'Umweltgerechte Entsorgung',
     description: 'Fachgerechte Entsorgung von Gefahrstoffen und Chemikalien',
     category: 'Entsorgung',
     type: 'environmental',
-    image: '/placeholder-environmental.jpg'
+    image: getImagePath('/placeholder-environmental.jpg')
   },
   {
     title: 'Anlagenbewertung vor Ort',
     description: 'Detaillierte Bewertung und Dokumentation von Industrieanlagen',
     category: 'Bewertung',
     type: 'evaluation',
-    image: '/placeholder-evaluation.jpg'
+    image: getImagePath('/placeholder-evaluation.jpg')
   },
   {
     title: 'Logistik und Transport',
     description: 'Spezialtransport für schwere Maschinen und Anlagenteile',
     category: 'Transport',
     type: 'logistics',
-    image: '/placeholder-logistics.jpg'
+    image: getImagePath('/placeholder-logistics.jpg')
   }
 ])
 
@@ -133,7 +140,7 @@ const loadMoreImages = () => {
       description: 'Innovative Verfahren zur Rohstoffgewinnung aus Altmaterialien',
       category: 'Aufbereitung',
       type: 'processing',
-      image: '/placeholder-processing.jpg',
+      image: getImagePath('/placeholder-processing.jpg'),
       imageLoaded: false
     },
     {
@@ -141,7 +148,7 @@ const loadMoreImages = () => {
       description: 'Strenge Qualitätsprüfung aller verwerteten Materialien',
       category: 'Kontrolle',
       type: 'quality',
-      image: '/placeholder-quality.jpg',
+      image: getImagePath('/placeholder-quality.jpg'),
       imageLoaded: false
     }
   ]

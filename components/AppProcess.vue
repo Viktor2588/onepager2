@@ -32,12 +32,19 @@
 </template>
 
 <script setup>
+const { $config } = useNuxtApp()
+
+const getImagePath = (imagePath) => {
+  const baseURL = $config.app?.baseURL || '/'
+  return baseURL === '/' ? imagePath : `${baseURL}${imagePath}`
+}
+
 const processSteps = [
   {
     title: 'Analyse & Bewertung',
     description: 'Detaillierte Vor-Ort-Analyse und Bewertung aller Anlagen und Materialien.',
     type: 'analysis',
-    image: '/img/IMG-20250714-Analyse&Bewertung.jpg',
+    image: getImagePath('/img/IMG-20250714-Analyse&Bewertung.jpg'),
     details: [
       'Umfassende Bestandsaufnahme',
       'Schadstoffprüfung und -bewertung',
@@ -49,7 +56,7 @@ const processSteps = [
     title: 'Planung & Konzeption',
     description: 'Entwicklung eines maßgeschneiderten Verwertungskonzepts.',
     type: 'planning',
-    image: '/img/IMG-20250714-Plannung&Konzeption.jpg',
+    image: getImagePath('/img/IMG-20250714-Plannung&Konzeption.jpg'),
     details: [
       'Demontage-Reihenfolge festlegen',
       'Logistikplanung für Transport',
@@ -61,7 +68,7 @@ const processSteps = [
     title: 'Demontage & Verwertung',
     description: 'Fachgerechte Demontage und sortenreine Trennung aller Materialien.',
     type: 'execution',
-    image: '/img/IMG-20250714-Industrieverwertung.jpg',
+    image: getImagePath('/img/IMG-20250714-Industrieverwertung.jpg'),
     details: [
       'Sichere Demontage durch Fachkräfte',
       'Sortenreine Materialtrennung',
@@ -73,7 +80,7 @@ const processSteps = [
     title: 'Qualitätskontrolle',
     description: 'Strenge Qualitätsprüfung und Umweltstandard-Einhaltung.',
     type: 'quality',
-    image: '/img/IMG-20250714-Beratung&Analyse.jpg',
+    image: getImagePath('/img/IMG-20250714-Beratung&Analyse.jpg'),
     details: [
       'Materialqualität prüfen',
       'Umweltauflagen kontrollieren',
@@ -85,7 +92,7 @@ const processSteps = [
     title: 'Dokumentation & Abschluss',
     description: 'Vollständige Dokumentation und Übergabe der Ergebnisse.',
     type: 'documentation',
-    image: '/img/IMG-20250714-Dokumentation&Abschluss.jpg',
+    image: getImagePath('/img/IMG-20250714-Dokumentation&Abschluss.jpg'),
     details: [
       'Umfassender Abschlussbericht',
       'Bilderdokumentation des Fortschritts',

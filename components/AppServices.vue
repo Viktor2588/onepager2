@@ -19,9 +19,16 @@
 </template>
 
 <script setup>
+const { $config } = useNuxtApp()
+
+const getImagePath = (imagePath) => {
+  const baseURL = $config.app?.baseURL || '/'
+  return baseURL === '/' ? imagePath : `${baseURL}${imagePath}`
+}
+
 const services = [
   {
-    icon: '/img/IMG-20250714-Industrieverwertung.jpg',
+    icon: getImagePath('/img/IMG-20250714-Industrieverwertung.jpg'),
     title: 'Industrieverwertung',
     description: 'Professionelle Verwertung von Industrieanlagen, Maschinen und Produktionsausrüstung mit maximaler Wertschöpfung.',
     features: [
@@ -32,7 +39,7 @@ const services = [
     ]
   },
   {
-    icon: '/img/IMG-20250714-Industrieverwertung.jpg',
+    icon: getImagePath('/img/IMG-20250714-Industrieverwertung.jpg'),
     title: 'Recycling & Entsorgung',
     description: 'Nachhaltige Recyclinglösungen und umweltgerechte Entsorgung nach neuesten Standards und Vorschriften.',
     features: [
@@ -43,7 +50,7 @@ const services = [
     ]
   },
   {
-    icon: '/img/IMG-20250714-Firmen-&Betriebsauflösung.jpg',
+    icon: getImagePath('/img/IMG-20250714-Firmen-&Betriebsauflösung.jpg'),
     title: 'Firmen- & Betriebsauflösung',
     description: 'Komplette Abwicklung von Firmen- und Betriebsauflösungen mit Fokus auf Werterhaltung und rechtliche Sicherheit.',
     features: [
@@ -54,7 +61,7 @@ const services = [
     ]
   },
   {
-    icon: '/img/IMG-20250714-Beratung&Analyse.jpg',
+    icon: getImagePath('/img/IMG-20250714-Beratung&Analyse.jpg'),
     title: 'Beratung & Analyse',
     description: 'Umfassende Beratung für optimale Verwertungsstrategien und nachhaltige Lösungskonzepte.',
     features: [

@@ -7,6 +7,9 @@ export default defineNuxtConfig({
   ],
   // Configure for static site generation
   ssr: false,
+  nitro: {
+    preset: 'github-pages'
+  },
   googleFonts: {
     families: {
       Inter: [400, 500, 600, 700],
@@ -27,6 +30,7 @@ export default defineNuxtConfig({
   },
   app: {
     baseURL: process.env.NUXT_APP_BASE_URL || '/',
+    cdnURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
       title: 'INDUVA GmbH - Ihr Partner für individuelle Verwertungslösungen',
       meta: [
