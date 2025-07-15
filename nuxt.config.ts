@@ -26,6 +26,7 @@ export default defineNuxtConfig({
     }
   },
   app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
       title: 'INDUVA GmbH - Ihr Partner für individuelle Verwertungslösungen',
       meta: [
