@@ -1,149 +1,120 @@
 <template>
   <section id="kontakt" class="contact-section">
     <div class="container">
+      <h2>Kontakt</h2>
+      
       <div class="contact-grid">
         <div class="contact-info">
-          <h2>Kontakt für visuelle Projekte</h2>
-          
           <div class="contact-item">
             <h3>📍 Unser Standort</h3>
             <p>
-              Industriestraße 25<br>
-              70437 Stuttgart<br>
+              Duvenstedter Damm 24 – 26<br>
+              22397 Hamburg<br>
               Deutschland
             </p>
           </div>
           
           <div class="contact-item">
-            <h3>📞 Direkte Hotline</h3>
+            <h3>📞 Telefon</h3>
             <p>
-              Telefon: <a href="tel:+497113968250">+49 711 3968 250</a><br>
-              Fax: +49 711 3968 251<br>
-              <strong>24/7 Fotodokumentation verfügbar</strong>
+              <a href="tel:+4940525605">+49 (040) 525 60 50</a>
             </p>
           </div>
           
           <div class="contact-item">
-            <h3>✉️ E-Mail Kontakt</h3>
+            <h3>✉️ E-Mail</h3>
             <p>
-              Allgemein: <a href="mailto:info@induva-verwertung.de">info@induva-verwertung.de</a><br>
-              Bildmaterial: <a href="mailto:bilder@induva-verwertung.de">bilder@induva-verwertung.de</a><br>
-              Projekte: <a href="mailto:projekte@induva-verwertung.de">projekte@induva-verwertung.de</a>
+              <a href="mailto:info@ht-kg.de">info@ht-kg.de</a>
             </p>
           </div>
           
           <div class="contact-item">
             <h3>🕒 Geschäftszeiten</h3>
             <p>
-              <strong>Montag - Freitag:</strong> 7:00 – 18:00 Uhr<br>
-              <strong>Samstag:</strong> 8:00 – 14:00 Uhr<br>
-              <strong>Sonntag:</strong> Nach Vereinbarung<br>
-              <em>📸 Fotodokumentation 24/7 möglich</em>
-            </p>
-          </div>
-
-          <div class="contact-item">
-            <h3>📷 Bildservice</h3>
-            <p>
-              <strong>Vor-Ort Fotografie:</strong> Ja<br>
-              <strong>Drohnaufnahmen:</strong> Verfügbar<br>
-              <strong>Zeitraffer-Videos:</strong> Auf Anfrage<br>
-              <strong>360° Dokumentation:</strong> Premium Service
+              <strong>Montag - Freitag:</strong> 8:00 – 17:00 Uhr<br>
+              <strong>Samstag:</strong> Nach Vereinbarung
             </p>
           </div>
         </div>
 
         <div class="contact-form">
           <div class="contact-form-container">
-            <h2>Bildprojekt anfragen</h2>
+            <h3>Kontaktformular</h3>
             <form @submit.prevent="handleSubmit">
               <div class="form-group" :class="{ error: errors.name }">
-                <label for="name">Vollständiger Name *</label>
+                <label for="name">Name *</label>
                 <input
                   type="text"
                   id="name"
                   v-model="formData.name"
-                  placeholder="Max Mustermann"
+                  placeholder="Ihr vollständiger Name"
                   @input="clearError('name')"
                   required
                 />
                 <div v-if="errors.name" class="error-message">{{ errors.name }}</div>
               </div>
               
-              <div class="form-group" :class="{ error: errors.company }">
+              <div class="form-group">
                 <label for="company">Unternehmen</label>
                 <input
                   type="text"
                   id="company"
                   v-model="formData.company"
-                  placeholder="Ihr Unternehmen"
-                  @input="clearError('company')"
+                  placeholder="Ihr Unternehmen (optional)"
                 />
               </div>
               
               <div class="form-group" :class="{ error: errors.email }">
-                <label for="email">E-Mail Adresse *</label>
+                <label for="email">E-Mail *</label>
                 <input
                   type="email"
                   id="email"
                   v-model="formData.email"
-                  placeholder="max@mustermann.de"
+                  placeholder="ihre.email@beispiel.de"
                   @input="clearError('email')"
                   required
                 />
                 <div v-if="errors.email" class="error-message">{{ errors.email }}</div>
               </div>
               
-              <div class="form-group" :class="{ error: errors.phone }">
-                <label for="phone">Telefonnummer *</label>
+              <div class="form-group">
+                <label for="phone">Telefon</label>
                 <input
                   type="tel"
                   id="phone"
                   v-model="formData.phone"
-                  placeholder="+49 711 123456"
-                  @input="clearError('phone')"
-                  required
+                  placeholder="+49 40 123456789"
                 />
-                <div v-if="errors.phone" class="error-message">{{ errors.phone }}</div>
               </div>
               
               <div class="form-group">
-                <label for="service">Gewünschte Dienstleistung</label>
+                <label for="service">Betreff</label>
                 <select id="service" v-model="formData.service">
                   <option value="">Bitte wählen Sie...</option>
-                  <option value="industrieverwertung">Industrieverwertung mit Fotodokumentation</option>
-                  <option value="firmenaufloesung">Firmenauflösung mit Bildprotokoll</option>
-                  <option value="betriebsaufloesung">Betriebsauflösung mit Zeitraffer</option>
-                  <option value="recycling">Recycling-Prozess dokumentieren</option>
-                  <option value="fotodokumentation">Reine Fotodokumentation</option>
-                  <option value="beratung">Beratung mit visueller Präsentation</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="photoRequirements">Foto-Anforderungen</label>
-                <select id="photoRequirements" v-model="formData.photoRequirements">
-                  <option value="">Standard Dokumentation</option>
-                  <option value="basic">Basis-Fotodokumentation</option>
-                  <option value="extended">Erweiterte Bilddokumentation</option>
-                  <option value="premium">Premium mit Drohne & 360°</option>
-                  <option value="timelapse">Zeitraffer-Video</option>
-                  <option value="before-after">Vorher-Nachher Vergleiche</option>
+                  <option value="industrieverwertung">Industrieverwertung</option>
+                  <option value="recycling">Recycling & Entsorgung</option>
+                  <option value="firmenaufloesung">Firmen- & Betriebsauflösung</option>
+                  <option value="beratung">Beratung & Analyse</option>
+                  <option value="fahrzeuge">Fahrzeuge und Baumaschinen</option>
+                  <option value="sonstiges">Sonstiges</option>
                 </select>
               </div>
               
-              <div class="form-group">
-                <label for="message">Projektbeschreibung</label>
+              <div class="form-group" :class="{ error: errors.message }">
+                <label for="message">Nachricht *</label>
                 <textarea
                   id="message"
                   v-model="formData.message"
                   rows="5"
-                  placeholder="Beschreiben Sie Ihr Projekt und gewünschte Bildanforderungen..."
+                  placeholder="Beschreiben Sie Ihr Anliegen..."
+                  @input="clearError('message')"
+                  required
                 ></textarea>
+                <div v-if="errors.message" class="error-message">{{ errors.message }}</div>
               </div>
               
               <button type="submit" class="submit-btn" :disabled="isSubmitting">
-                <span v-if="!isSubmitting">📸 Bildprojekt anfragen</span>
+                <span v-if="!isSubmitting">Nachricht senden</span>
                 <span v-else>Wird gesendet...</span>
               </button>
             </form>
@@ -161,7 +132,6 @@ const formData = reactive({
   email: '',
   phone: '',
   service: '',
-  photoRequirements: '',
   message: ''
 })
 
@@ -187,10 +157,8 @@ const validateForm = () => {
     newErrors.email = 'Ungültige E-Mail-Adresse'
   }
   
-  if (!formData.phone.trim()) {
-    newErrors.phone = 'Telefonnummer ist erforderlich'
-  } else if (!/^[\+]?[\d\s\-\(\)]{10,}$/.test(formData.phone.replace(/\s/g, ''))) {
-    newErrors.phone = 'Ungültige Telefonnummer'
+  if (!formData.message.trim()) {
+    newErrors.message = 'Nachricht ist erforderlich'
   }
   
   return newErrors
@@ -214,7 +182,7 @@ const handleSubmit = async () => {
     
     // Show success message
     if (process.client) {
-      alert(`Vielen Dank für Ihre Bildprojekt-Anfrage, ${formData.name}! Wir senden Ihnen binnen 24 Stunden eine detaillierte Antwort mit Beispielbildern ähnlicher Projekte.`)
+      alert(`Vielen Dank für Ihre Nachricht, ${formData.name}! Wir werden uns schnellstmöglich bei Ihnen melden.`)
     }
     
     // Reset form
@@ -224,7 +192,7 @@ const handleSubmit = async () => {
     
   } catch (error) {
     if (process.client) {
-      alert('Fehler beim Senden der Anfrage. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.')
+      alert('Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.')
     }
   } finally {
     isSubmitting.value = false
@@ -233,7 +201,94 @@ const handleSubmit = async () => {
 </script>
 
 <style scoped>
-select {
+.contact-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--primary-green) 0%, rgba(26, 61, 46, 0.9) 100%);
+  color: var(--text-white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--accent-mustard);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-item {
+  background: rgba(26, 61, 46, 0.3);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--accent-mustard);
+}
+
+.contact-item h3 {
+  color: var(--accent-mustard);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.contact-item p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contact-item a {
+  color: var(--accent-mustard);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.contact-item a:hover {
+  opacity: 0.8;
+}
+
+.contact-form-container {
+  background: rgba(26, 61, 46, 0.3);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(212, 165, 116, 0.2);
+}
+
+.contact-form-container h3 {
+  color: var(--accent-mustard);
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--accent-mustard);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
   width: 100%;
   padding: 1rem;
   border: 2px solid rgba(212, 165, 116, 0.3);
@@ -244,23 +299,73 @@ select {
   transition: all 0.3s ease;
 }
 
-select:focus {
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
   outline: none;
   border-color: var(--accent-mustard);
   background: rgba(26, 61, 46, 0.7);
   box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
 }
 
-select option {
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group select option {
   background: var(--primary-green);
   color: var(--text-white);
-  padding: 0.5rem;
+}
+
+.form-group.error input,
+.form-group.error textarea,
+.form-group.error select {
+  border-color: #e74c3c;
 }
 
 .error-message {
-  color: var(--danger);
+  color: #e74c3c;
   font-size: 0.875rem;
   margin-top: 0.5rem;
-  display: block;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(45deg, var(--accent-mustard), #e6b800);
+  color: var(--primary-green);
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 165, 116, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contact-section {
+    padding: 3rem 0;
+  }
+  
+  .contact-section h2 {
+    font-size: 2rem;
+  }
 }
 </style>

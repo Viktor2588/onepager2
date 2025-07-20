@@ -3,11 +3,38 @@
     <div class="container">
       <div class="footer-container">
         <div class="footer-info">
-          <p>&copy; 2024 INDUVA GmbH. Alle Rechte vorbehalten.</p>
-          <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">
-            Ihr Partner für visuelle Verwertungslösungen
-          </p>
+          <div class="company-info">
+            <h4>HT Hanseatische Industrie-Consult GmbH & Co. KG</h4>
+            <p>Duvenstedter Damm 24 – 26</p>
+            <p>22397 Hamburg</p>
+            <p>Tel.: (040) 525 60 50</p>
+            <p>Email: info@ht-kg.de</p>
+          </div>
         </div>
+        
+        <div class="footer-certification">
+          <div class="dqs-cert">
+            <h4>DQS-zertifiziertes</h4>
+            <h4>Managementsystem</h4>
+            <h4>ISO 9001 : 2015</h4>
+            <div class="cert-logo">🏆</div>
+          </div>
+        </div>
+        
+        <div class="footer-legal">
+          <div class="legal-links">
+            <h4>IMPRESSUM</h4>
+            <h4>DATENSCHUTZ</h4>
+            <h4>BEDINGUNGEN</h4>
+          </div>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2024 INDUVA GmbH. Alle Rechte vorbehalten.</p>
+        <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">
+          Ihr Partner für visuelle Verwertungslösungen
+        </p>
       </div>
       
       <!-- Additional Footer Info for Image Variant -->
@@ -54,6 +81,66 @@ onMounted(() => {
   flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: 2rem;
+}
+
+.company-info h4 {
+  color: var(--accent-mustard);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.company-info p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-certification {
+  text-align: center;
+}
+
+.dqs-cert {
+  background: rgba(212, 165, 116, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 2px solid var(--accent-mustard);
+}
+
+.dqs-cert h4 {
+  color: var(--accent-mustard);
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.cert-logo {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.footer-legal {
+  text-align: right;
+}
+
+.legal-links h4 {
+  color: var(--accent-mustard);
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.legal-links h4:hover {
+  opacity: 0.7;
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid rgba(212, 165, 116, 0.3);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.copyright p {
+  margin: 0;
 }
 
 .footer-info p {

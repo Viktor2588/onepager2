@@ -70,6 +70,17 @@ const services = [
       'Rechtliche Beratung',
       'Nachhaltigkeitskonzepte'
     ]
+  },
+  {
+    icon: getImagePath('/img/IMG-20250714-Industrieverwertung.jpg'),
+    title: 'Fahrzeuge und Baumaschinen',
+    description: 'Professionelle Verwertung und Demontage von Fahrzeugen, Baumaschinen und mobilen Anlagen.',
+    features: [
+      'Fahrzeugverwertung',
+      'Baumaschinendemontage',
+      'Altmetallverwertung',
+      'Ersatzteilgewinnung'
+    ]
   }
 ]
 </script>
