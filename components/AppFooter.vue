@@ -36,18 +36,6 @@
           Ihr Partner für visuelle Verwertungslösungen
         </p>
       </div>
-      
-      <!-- Additional Footer Info for Image Variant -->
-      <div style="border-top: 1px solid rgba(212, 165, 116, 0.3); margin-top: 2rem; padding-top: 1.5rem; text-align: center;">
-        <div style="margin-top: 2rem; padding: 1rem; background: rgba(212, 165, 116, 0.1); border-radius: 10px;">
-          <h4 style="color: var(--accent-mustard); margin-bottom: 0.5rem;">🏆 Auszeichnungen & Zertifikate</h4>
-          <p style="font-size: 0.9rem; opacity: 0.8;">
-            Gewinner "Beste Industriefotografie 2024" | ISO 14001 zertifiziert | 
-            Drohnenpilot-Lizenz A2 | Mitglied im BDI (Bundesverband Digitale Wirtschaft)
-          </p>
-        </div>
-        
-      </div>
     </div>
   </footer>
 </template>
