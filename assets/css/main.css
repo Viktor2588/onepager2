@@ -286,10 +286,10 @@ body {
 }
 
 .service-icon {
-  width: 80px;
-  height: 80px;
+  width: min(250px, 80%);
+  height: 150px;
   background: linear-gradient(45deg, var(--accent-mustard), var(--accent-mustard-light));
-  border-radius: 50%;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -844,6 +844,12 @@ body {
 
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .service-icon {
+    width: 90%;
+    max-width: none;
+    height: 120px;
   }
 
   .before-after-container {

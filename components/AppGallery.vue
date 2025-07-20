@@ -1,7 +1,7 @@
 <template>
   <section id="galerie" class="gallery-section">
     <div class="container">
-      <h2>Unsere Arbeit in Bildern</h2>
+      <h2>Recycling und Entsorgung</h2>
       <div class="gallery-grid">
         <div 
           v-for="(item, index) in galleryItems" 
@@ -67,25 +67,11 @@ const galleryItems = ref([
     imageLoaded: false
   },
   {
-    title: 'Metallrecycling Prozess',
-    description: 'Sortierung und Aufbereitung von Industriemetallen',
+    title: 'Recycling und Entsorgung',
+    description: 'Metallrecycling, Betriebsauflösung und umweltgerechte Entsorgung',
     category: 'Recycling',
     type: 'recycling',
     image: getImagePath('/placeholder-recycling.jpg')
-  },
-  {
-    title: 'Betriebsauflösung Komplett',
-    description: 'Komplette Räumung und Verwertung eines Industriebetriebs',
-    category: 'Auflösung',
-    type: 'demolition',
-    image: getImagePath('/placeholder-demolition.jpg')
-  },
-  {
-    title: 'Umweltgerechte Entsorgung',
-    description: 'Fachgerechte Entsorgung von Gefahrstoffen und Chemikalien',
-    category: 'Entsorgung',
-    type: 'environmental',
-    image: getImagePath('/placeholder-environmental.jpg')
   },
   {
     title: 'Anlagenbewertung vor Ort',
