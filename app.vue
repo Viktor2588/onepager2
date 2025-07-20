@@ -4,7 +4,6 @@
     <AppHero />
     <AppServices />
     <AppGallery />
-    <AppBeforeAfter />
     <AppProcess />
     <AppContact />
     <AppFooter />

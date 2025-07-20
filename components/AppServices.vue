@@ -81,6 +81,17 @@ const services = [
       'Altmetallverwertung',
       'Ersatzteilgewinnung'
     ]
+  },
+  {
+    icon: getImagePath('/img/IMG-20250714-Firmen-&Betriebsauflösung.jpg'),
+    title: 'Immobilien',
+    description: 'Professionelle Abwicklung von Immobilienverwertung und Gebäudeauflösung mit Fokus auf Werterhaltung.',
+    features: [
+      'Immobilienbewertung',
+      'Gebäudeauflösung',
+      'Entrümpelung',
+      'Verwertungskonzepte'
+    ]
   }
 ]
 </script>
