@@ -8,7 +8,10 @@ export default defineNuxtConfig({
   // Configure for static site generation
   ssr: false,
   nitro: {
-    preset: 'github-pages'
+    preset: 'github-pages',
+    prerender: {
+      routes: ['/immobilien', '/datenschutz', '/impressum']
+    }
   },
   googleFonts: {
     families: {

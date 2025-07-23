@@ -39,7 +39,7 @@ const services = [
     ]
   },
   {
-    icon: getImagePath('/img/IMG-20250714-Industrieverwertung.jpg'),
+    icon: getImagePath('/img/IMG-20250714-Recycling.jpg'),
     title: 'Recycling & Entsorgung',
     description: 'Nachhaltige Recyclinglösungen und umweltgerechte Entsorgung nach neuesten Standards und Vorschriften.',
     features: [
@@ -72,7 +72,7 @@ const services = [
     ]
   },
   {
-    icon: getImagePath('/img/IMG-20250714-Industrieverwertung.jpg'),
+    icon: getImagePath('/img/IMG-20250714-Fahrzeuge.jpg'),
     title: 'Fahrzeuge und Baumaschinen',
     description: 'Professionelle Verwertung und Demontage von Fahrzeugen, Baumaschinen und mobilen Anlagen.',
     features: [
@@ -83,7 +83,7 @@ const services = [
     ]
   },
   {
-    icon: getImagePath('/img/IMG-20250714-Firmen-&Betriebsauflösung.jpg'),
+    icon: getImagePath('/img/IMG-20250714-Immobilien.jpg'),
     title: 'Immobilien',
     description: 'Professionelle Abwicklung von Immobilienverwertung und Gebäudeauflösung mit Fokus auf Werterhaltung.',
     features: [

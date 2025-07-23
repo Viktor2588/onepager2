@@ -8,8 +8,8 @@
           <div class="contact-item">
             <h3>📍 Unser Standort</h3>
             <p>
-              Duvenstedter Damm 24 – 26<br>
-              22397 Hamburg<br>
+              [Straße und Hausnummer]<br>
+              89073 Ulm<br>
               Deutschland
             </p>
           </div>
@@ -34,6 +34,14 @@
               <strong>Montag - Freitag:</strong> 8:00 – 17:00 Uhr<br>
               <strong>Samstag:</strong> Nach Vereinbarung
             </p>
+          </div>
+
+          <div class="contact-item qr-code-section">
+            <h3>📱 QR-Code</h3>
+            <div class="qr-code-container">
+              <img src="/img/qr-code.jpg" alt="QR-Code für Kontaktdaten" class="qr-code-image">
+              <p>Scannen Sie den Code für unsere Kontaktdaten</p>
+            </div>
           </div>
         </div>
 
@@ -352,6 +360,34 @@ const handleSubmit = async () => {
 .submit-btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+.qr-code-section {
+  text-align: center;
+}
+
+.qr-code-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.qr-code-image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border: 2px solid var(--accent-mustard);
+  border-radius: 10px;
+  padding: 0.5rem;
+  background: white;
+}
+
+.qr-code-container p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {

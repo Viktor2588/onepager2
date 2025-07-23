@@ -1,25 +1,19 @@
 <template>
   <div>
     <AppHeader />
-    <AppHero />
-    <AppServices />
-    <AppGallery />
-    <AppProcess />
-    <AppContact />
+    <NuxtPage />
     <AppFooter />
     <AppLightbox />
   </div>
 </template>
 
 <script setup>
-// Meta tags for unified variant
+// Global meta tags
 useHead({
-  titleTemplate: '%s - INDUVA GmbH',
+  titleTemplate: '%s',
   meta: [
-    { name: 'description', content: 'INDUVA GmbH - Ihr Partner für individuelle Verwertungslösungen mit visueller Dokumentation und professioneller Industrieverwertung.' },
-    { property: 'og:type', content: 'website' },
-    { property: 'og:title', content: 'INDUVA GmbH - Verwertungslösungen' },
-    { property: 'og:description', content: 'Professionelle Industrieverwertung mit visueller Dokumentation. Sehen Sie unsere Arbeit in Bildern und Vorher-Nachher-Vergleichen.' }
+    { charset: 'utf-8' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ]
 })
 </script>

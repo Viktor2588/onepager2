@@ -4,9 +4,9 @@
       <div class="footer-container">
         <div class="footer-info">
           <div class="company-info">
-            <h4>HT Hanseatische Industrie-Consult GmbH & Co. KG</h4>
-            <p>Duvenstedter Damm 24 – 26</p>
-            <p>22397 Hamburg</p>
+            <h4>Björn Kratz</h4>
+            <p>[Straße und Hausnummer]</p>
+            <p>89073 Ulm</p>
             <p>Tel.: (040) 525 60 50</p>
             <p>Email: info@ht-kg.de</p>
           </div>
@@ -23,15 +23,15 @@
         
         <div class="footer-legal">
           <div class="legal-links">
-            <h4>IMPRESSUM</h4>
-            <h4>DATENSCHUTZ</h4>
+            <NuxtLink to="/impressum"><h4>IMPRESSUM</h4></NuxtLink>
+            <NuxtLink to="/datenschutz"><h4>DATENSCHUTZ</h4></NuxtLink>
             <h4>BEDINGUNGEN</h4>
           </div>
         </div>
       </div>
       
       <div class="copyright">
-        <p>&copy; 2024 INDUVA GmbH. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2025 INDUVA GmbH. Alle Rechte vorbehalten.</p>
         <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem;">
           Ihr Partner für visuelle Verwertungslösungen
         </p>
@@ -106,6 +106,11 @@ onMounted(() => {
 
 .footer-legal {
   text-align: right;
+}
+
+.legal-links a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .legal-links h4 {
